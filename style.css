@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'cordel';
+    src: url('fonte/Cordel\ Encarnado.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0: #efedcb;
+    --cor1: #0c0c0a;
+
+    --fonte-padrao: arial, verdana, helvetica, 'sans-serif';
+    --fonte-cordel: 'cordel', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-color: var(--cor1);
+    text-align: center;
+}
+
+header h1 {
+    margin: auto;
+    padding-top: 50px;
+    font-family: var(--fonte-cordel);
+    font-size: 10vw;
+    font-variant: small-caps;
+    color: var(--cor0);
+}
+
+header p {
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    text-decoration: none;
+    color: var(--cor0);  
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    font-family: var(--fonte-cordel);
+    font-size: 3vw;
+    line-height: 2em;
+    color: var(--cor1);
+}
+
+section p {
+    padding-bottom: 2em
+}
+
+section.normal {
+    background-color: var(--cor0);
+}
+
+section.img {
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(59, 59, 59);
+    color: var(--cor0);
+    box-shadow: inset 0px 6px 12px 0px rgba(0, 0, 0, 0.6);
+}
+
+section.img > p {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+section#img01 {
+    background-image: url('img/cordel001.jpg');
+    background-position: center center;  
+}
+
+section#img02 {
+    background-image: url("img/cordel002.jpg");
+    background-position: center center;  
+}
+
+footer {
+    padding: 20px;
+    background-color: var(--cor1);
+    text-align: center;
+    color: var(--cor0);
+}
+
+footer p {
+    margin: auto;
+}
